@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Askiee/Ask</title>
+
+    <link rel="stylesheet" href="../CSS/style.css"/>
+    <link rel="stylesheet" href="../CSS/detail.css"/>
+</head>
+<body>
+    <div>
+        <form action="../SQL/addQuestion.php" method="POST">
+            <table class="add-table">
+                <tr>
+                    <td>
+                        Question:
+                    </td>
+                    <td>
+                        <textarea name="question" cols="100" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tag:
+                    </td>
+                    <td>
+                        <input type="checkbox" name="tag" value="science"/>SCIENCE
+                        <input type="checkbox" name="tag" value="technology"/>TECHNOLOGY
+                        <input type="checkbox" name="tag" value="maths"/>MATHS
+                        <input type="checkbox" name="tag" value="history"/>HISTORY
+                        <input type="checkbox" name="tag" value="general"/>GENERAL
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Ask"/>
+        </form>
+    </div>
+</body>
+</html>

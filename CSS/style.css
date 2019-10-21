@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* navigation bar */
+nav{
+    background-color: black;
+    padding: 20px;
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    position: sticky;
+    top: 0;
+}
+
+/* all the links in the page */
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+
+/* only to the navigation bar links */
+nav a:hover, button:hover{
+    color: red;
+}
+
+
+/* main part of the website */
+main{
+    text-align: center;
+}
+
+/* introduction part */
+.intro{
+    margin: 0;
+    padding: 30px;
+    min-height: 600px;
+}
+
+/* section containing welcome banner */
+.welcome{
+    background-image: url('../ASSETS/jon-tyson-hhq1Lxtuwd8-unsplash.jpg');
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+}
+
+/* screenShots of the websites */
+.SS{
+    height: 800px;
+}
+
+.SS img{
+    width: 300px;
+    height: 300px;
+}
+
+/* section containing features of the website */
+.feature{
+    padding: 100px;
+    background-color: chocolate;
+    clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* The black overlay background for signup and login box */
+.signup-bg{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+/* 
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: none;
+}
+
+/* span that closes the signup nad login box */
+.close-signup{
+    cursor: pointer;
+}
+
+/* The signup box */
+.signup-box{
+    background-color: white;
+    padding: 12px;
+    text-align: right;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* form */
+form{
+    text-align: center;
+}
+
+td{
+    padding: 10px;
+}
+
+/* The contact or the bottom part of the website */
+#contact{
+    background-color: black;
+    padding: 30px;
+    min-height: 300px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* contacting lists */
+address{
+    padding: 30px;
+    border-right: solid white 1px;
+    text-align: center;
+}
+
+/* links for the references */
+.links{
+    padding: 30px;
+    text-align: center;
+}

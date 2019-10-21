@@ -1,0 +1,38 @@
+.upperArrow{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    font-size: 25px;
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 50%;
+}
+
+/* .overlay-div{
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+} */
+
+.add-div{
+    padding: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.list-div{
+    padding: 30px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 10px;
+}
+
+.tag{
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 5px;
+}

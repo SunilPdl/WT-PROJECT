@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ASKIEE</title>
+
+    <link rel="stylesheet" href="../CSS/style.css"/>
+    <link rel="stylesheet" href="../CSS/detail.css"/>
+    
+    <script defer src="../JS/script.js"></script>
+</head>
+<body>
+    <!-- head of the landing page before login -->
+    <header>
+        <!-- navigation Bar -->
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="../PHP/explore.php">Explore</a>
+            <a href="#contact">Contact</a>
+            <!-- <a href="#" onclick="signup_popup()">Signup</a> -->
+            <button onclick="signup_popup()">Signup</button>
+        </nav>
+    </header>
+
+    <!-- the information part of the landing page -->
+    <main>
+        <section class="intro welcome">
+            <!-- <div class="overlay-div"> -->
+                <h1>Welcome to askiee</h1>
+            <!-- </div> -->
+        </section>
+        <section class="intro SS">
+            <img src="../ASSETS/aaron-burden-AXqMy8MSSdk-unsplash.jpg" alt="explore.jpg">
+            <h2>Join and ask</h2>
+        </section>
+        <section class="intro feature">
+            <h3>hello</h3>
+        </section>
+    </main>
+
+    <!-- signUp pop up box -->
+    <section class="signup-bg" value="close">
+        
+        <div class="signup-box">
+            <span class="close-signup" onclick="signup_popup()"> X </span>
+            <form action="../PHP/handleUser.php" method="POST">
+                <h3>Sign-up</h3>
+                <table>
+                    <tr>
+                        <td>Email :</td>
+                        <td>
+                            <input type="email" name="email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UserName :</td>
+                        <td>
+                            <input type="text" name="Uname"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password :</td>
+                        <td>
+                            <input type="password" name="pass"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Retype :</td>
+                        <td>
+                            <input type="password" name="pass2"/>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="SIgnUp"/>
+                or <button onclick="login_popup()" style="color: black;">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- foot of the website, contact part -->
+    <footer id="contact">
+        <address>
+            <pre>
+                Email : <a href="mailto:abc@gmail.com">abc@gmail.com</a>
+                Tel : <a href="tel:+061-234521">+061-234521</a>
+                <i>F</i>
+                <i>I</i>
+                <i>E</i>
+            </pre>
+        </address>
+        <section class="links">
+            <h3>Links</h3>
+            <a href="#">ClipPath</a><br>
+            <a href="#">A</a><br>
+            <a href="#">B</a>
+        </section>
+    </footer>
+
+</body>
+
+</html>
