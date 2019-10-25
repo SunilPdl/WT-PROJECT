@@ -21,25 +21,24 @@
 
     <link rel="stylesheet" href="../CSS/style.css"/>
     <link rel="stylesheet" href="../CSS/detail.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script defer scr="../JS/script.js"></script>
 </head>
 <body>
-    <div id="top"></div>
-
     <!-- head of the explore page -->
     <header>
         <!-- navigation Bar -->
         <nav>
             <a href="#">Explore</a>
             <a href="#contact">Contact</a>
-            <a href="./process.php">logout</a>
+            <button>Signup</button>
         </nav>
     </header>
 
+    <div id="top"></div>
     <!-- questions and answer lists -->
     <main>
         <div class="add-div">
-            <a href="../HTML/add.html" style="color: black; font-size: 18px">
+            <a href="#" style="color: black; font-size: 18px" onclick="alert('Please signup or login first')">
                 <p id="add-link">
                     <u>Ask question</u>+
                 </p>
@@ -50,18 +49,7 @@
             <ul>
                 <li>
                     <i>Q: </i>
-                    <?= $data['Question']?>
-                    <span>
-                        <a href="../PHP/edit.php?id= <?= $data['Number'] ?>">
-                            <i style="color: black;" class="far fa-edit"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a href="../SQL/delete.php?id= <?= $data['Number'] ?>">
-                            <i style="color: black;">D</i>
-                        </a>
-                    </span>
-                    <br/><br/>
+                    <?= $data['Question']?><br/><br/>
                     <span>
                         Tag:
                         <i class="tag">
@@ -74,6 +62,44 @@
         </div>
     </main>
 
+    <!-- signUp pop up box -->
+    <div class="signup-bg" value="close"></div>
+
+        <div class="signup-box">
+            <span class="close-signup"> &times; </span>
+            <form action="../PHP/handleUser.php" method="POST">
+                <h3>Sign-up</h3>
+                <table>
+                    <tr>
+                        <td>Email :</td>
+                        <td>
+                            <input type="email" name="email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UserName :</td>
+                        <td>
+                            <input type="text" name="Uname"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password :</td>
+                        <td>
+                            <input type="password" name="pass"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Retype :</td>
+                        <td>
+                            <input type="password" name="pass2"/>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="SIgnUp"/>
+                or <button onclick="login_popup()" style="color: black;">Login</button>
+            </form>
+        </div>
+
     <span class="upperArrow">
         <a href="#top">^</a>
     </span>
@@ -81,11 +107,10 @@
      <!-- foot of the website, contact part -->
      <footer id="contact">
         <address>
-                <p>Email : <a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
-                <p>Tel : <a href="tel:+061-234521">+061-234521</a></p>
-                <a href="#" id="fa-facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" id="fa-instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" id="fa-twit"><i class="fab fa-twitter"></i></a>
+            <pre>
+                Email : <a href="mailto:abc@gmail.com">abc@gmail.com</a>
+                Tel : <a href="tel:+061-234521">+061-234521</a>
+            </pre>
         </address>
         <section class="links">
             <h3>Links</h3>

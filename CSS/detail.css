@@ -4,19 +4,24 @@
     right: 20px;
     font-size: 25px;
     padding: 5px;
-    border: solid 1px black;
+    border: solid 1px;
     border-radius: 50%;
+    background-color: black;
 }
-
-/* .overlay-div{
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1;
-} */
 
 .add-div{
     padding: 20px;
     font-size: 16px;
     text-align: left;
+    background-color: #cac7c7;
+}
+
+#add-link{
+    border: 1px solid black;
+    background-color: rgb(199, 73, 73);
+    display: inline;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .list-div{

@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="../CSS/style.css"/>
     <link rel="stylesheet" href="../CSS/detail.css"/>
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <script defer src="../JS/script.js"></script>
 </head>
 <body>
@@ -17,10 +18,10 @@
         <!-- navigation Bar -->
         <nav>
             <a href="./index.html">Home</a>
-            <a href="../PHP/explore.php">Explore</a>
+            <a href="../PHP/explore2.php">Explore</a>
             <a href="#contact">Contact</a>
             <!-- <a href="#" onclick="signup_popup()">Signup</a> -->
-            <button onclick="signup_popup()">Signup</button>
+            <button>Signup</button>
         </nav>
     </header>
 
@@ -41,11 +42,11 @@
     </main>
 
     <!-- signUp pop up box -->
-    <section class="signup-bg" value="close">
-        
+    <div class="signup-bg" value="close"></div>
+
         <div class="signup-box">
-            <span class="close-signup" onclick="signup_popup()"> X </span>
-            <form action="../PHP/handleUser.php" method="POST">
+            <span class="close-signup"> &times; </span>
+            <form action="../PHP/handleUser.php" method="POST" id="signup-form">
                 <h3>Sign-up</h3>
                 <table>
                     <tr>
@@ -74,27 +75,46 @@
                     </tr>
                 </table>
                 <input type="submit" value="SIgnUp"/>
-                or <button onclick="login_popup()" style="color: black;">Login</button>
             </form>
+            <button onclick="login_popUp()" style="color: black;"><u>Login</u></button>
+        <div class="login-box">
+            <span class="close-login"> &times; </span>    
+            <form action="../PHP/handleUser.php" method="POST" id="login-form">
+                <h3>Log-in</h3>
+                <table>
+                    <tr>
+                        <td>UserName :</td>
+                        <td>
+                            <input type="text" name="Uname"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password :</td>
+                        <td>
+                            <input type="password" name="pass"/>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="LogIn"/>
+                <button onclick="signup_popup()" style="color: black;"><u>SignUp</u></button>
+            </form>
+        </div>    
         </div>
-    </section>
 
     <!-- foot of the website, contact part -->
     <footer id="contact">
         <address>
-            <pre>
-                Email : <a href="mailto:abc@gmail.com">abc@gmail.com</a>
-                Tel : <a href="tel:+061-234521">+061-234521</a>
-                <i>F</i>
-                <i>I</i>
-                <i>E</i>
-            </pre>
+                <p>Email : <a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+                <p>Tel : <a href="tel:+061-234521">+061-234521</a></p>
+                <a href="#" id="fa-facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" id="fa-instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" id="fa-twit"><i class="fab fa-twitter"></i></a>
         </address>
         <section class="links">
             <h3>Links</h3>
             <a href="#">ClipPath</a><br>
-            <a href="#">A</a><br>
-            <a href="#">B</a>
+            <a href="#">FontAwesome</a><br>
+            <a href="#">Color-Platte</a>
         </section>
     </footer>
 

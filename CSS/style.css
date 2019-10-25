@@ -3,6 +3,14 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* head of the website */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 /* navigation bar */
 nav{
     background-color: black;
@@ -11,8 +19,6 @@ nav{
     font-size: 16px;
     letter-spacing: 2px;
     word-spacing: 10px;
-    position: sticky;
-    top: 0;
 }
 
 /* all the links in the page */
@@ -41,6 +47,7 @@ nav a:hover, button:hover{
 /* main part of the website */
 main{
     text-align: center;
+    margin-top: 60px;
 }
 
 /* introduction part */
@@ -81,7 +88,7 @@ main{
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
 /* 
     display: flex;
     justify-content: center;
@@ -91,12 +98,13 @@ main{
 }
 
 /* span that closes the signup nad login box */
-.close-signup{
+.close-signup, .close-login{
+    font-size: 20px;
     cursor: pointer;
 }
 
 /* The signup box */
-.signup-box{
+.signup-box, .login-box{
     background-color: white;
     padding: 12px;
     text-align: right;
@@ -105,6 +113,7 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
 }
 
 /* form */
@@ -120,7 +129,10 @@ td{
 #contact{
     background-color: black;
     padding: 30px;
-    min-height: 300px;
+    line-height: 40px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-size: 20px;
     color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -133,8 +145,28 @@ address{
     text-align: center;
 }
 
+address a:hover{
+    text-decoration: underline;
+}
+
 /* links for the references */
 .links{
     padding: 30px;
     text-align: center;
+}
+
+.links a:hover{
+    color: chartreuse;
+}
+
+#fa-facebook:hover{
+    color: rgb(37, 37, 223);
+}
+
+#fa-instagram:hover{
+    color: red;
+}
+
+#fa-twit:hover{
+    color: lightblue;
 }

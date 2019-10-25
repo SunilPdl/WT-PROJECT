@@ -1,3 +1,10 @@
+<?php
+    require_once "../SQL/connection.php";
+
+    $previousDataResult = mysqli_query($connect, "SELECT * FROM questions WHERE Number = ". $id ) ;
+    $previous = mysqli_fetch_assoc($previousDataResult) ;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +18,17 @@
 </head>
 <body>
     <div class="text-add">
-        <h3>Ask Question</h3>
+        <h3>Edit Question</h3>
     </div>
     <div class="add-edit-form">
-        <form action="../SQL/addQuestion.php" method="POST">
+        <form action="../SQL/update.php" method="POST">
             <table class="add-table">
                 <tr>
                     <td>
                         Question:
                     </td>
                     <td>
-                        <textarea name="question" cols="90" rows="10"></textarea>
+                        <textarea name="question" cols="90" rows="10" value="<?= $previous['question']?>"></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -39,10 +46,6 @@
             </table>
             <input type="submit" value="Ask"/>
         </form>
-    </div>
-
-    <div class="cancel-div">
-        <a href="../PHP/explore.php"><button>Cancel</button></a>
     </div>
 </body>
 </html>

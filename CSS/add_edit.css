@@ -1,0 +1,47 @@
+html{
+  background-color: cornflowerblue;  
+}
+
+.text-add{
+    text-align: center;
+    padding: 20px;
+}
+
+.add-edit-form{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+form{
+    border: 1px solid;
+    padding: 30px;
+    background-color: cadetblue;
+}
+
+input[type="submit"]{
+    background-color: darkgoldenrod;
+    border: none;
+    padding: 7px;
+    box-shadow: 1px 1px 1px;
+}
+
+input[type="submit"]:hover{
+  
+    box-shadow: 2px 2px 2px black;
+}
+
+.cancel-div{
+    text-align: center;
+    padding: 20px;
+}
+
+.cancel-div button{
+    background-color: rgb(231, 40, 40);
+    padding: 10px;
+}
+
+.cancel-div a:hover{
+    color: initial;
+}
