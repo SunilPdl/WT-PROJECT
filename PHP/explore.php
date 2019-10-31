@@ -1,15 +1,15 @@
 <?php
 
-    require_once "../SQL/connection.php";
+        require_once "../SQL/connection.php";
 
-    $sql = 'select * from questions ' ;
+        $sql = 'select * from questions ' ;
 
-    //$result stores result from query
-    $result = mysqli_query($connect, $sql) ;
+        //$result stores result from query
+        $result = mysqli_query($connect, $sql) ;
 
-    //mysqli_fetch_all gives us an associative array of sql output
-    // and we store it in $questionArray array variable
-    $questionArray = mysqli_fetch_all( $result, MYSQLI_ASSOC) ;
+        //mysqli_fetch_all gives us an associative array of sql output
+        // and we store it in $questionArray array variable
+        $questionArray = mysqli_fetch_all( $result, MYSQLI_ASSOC) ;
 ?>
 
 <!DOCTYPE html>

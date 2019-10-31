@@ -5,6 +5,7 @@
 
     $previousDataResult = mysqli_query($connect, "SELECT * FROM questions WHERE Number = ". $id ) ;
     $previous = mysqli_fetch_assoc($previousDataResult) ;
+    
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +32,7 @@
                         Question:
                     </td>
                     <td>
-                        <textarea name="question" cols="90" rows="10">
-                            <?= $previous['Question']?>
-                        </textarea>
+                        <textarea name="question" cols="90" rows="10"><?= $previous['Question']?></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -41,15 +40,45 @@
                         Tag:
                     </td>
                     <td>
-                        <input type="hidden" value="<?= $previous['tag']?>" id="tag">
-                        <input type="radio" name="tag" value="science" id="S"/>SCIENCE
-                        <input type="radio" name="tag" value="technology" id="T"/>TECHNOLOGY
-                        <input type="radio" name="tag" value="maths" id="M"/>MATHS
-                        <input type="radio" name="tag" value="history" id="H"/>HISTORY
-                        <input type="radio" name="tag" value="general" id="G"/>GENERAL
+                        <input type="radio" name="tag" value="science" 
+                            <?php
+                                if($previous['tag'] == 'science'){
+                                    echo "checked";
+                                }
+                            ?>
+                        />SCIENCE
+                        <input type="radio" name="tag" value="technology" 
+                            <?php
+                                if($previous['tag'] == 'technology'){
+                                    echo "checked";
+                                }
+                            ?>
+                        />TECHNOLOGY
+                        <input type="radio" name="tag" value="maths" 
+                            <?php
+                                if($previous['tag'] == 'maths'){
+                                    echo "checked";
+                                }
+                            ?>
+                        />MATHS
+                        <input type="radio" name="tag" value="history" 
+                            <?php
+                                if($previous['tag'] == 'history'){
+                                    echo "checked";
+                                }
+                            ?>
+                        />HISTORY
+                        <input type="radio" name="tag" value="general" 
+                            <?php
+                                if($previous['tag'] == 'general'){
+                                    echo "checked";
+                                }
+                            ?>
+                        />GENERAL
                     </td>
                 </tr>
             </table>
+            <input type="hidden" name="id" value="<?= $id ?>"/>
             <input type="submit" value="edit"/>
         </form>
     </div>

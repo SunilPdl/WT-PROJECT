@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['LogIn'])){
+if(isset($_POST['login'])){
 
 require_once "../SQL/connection.php";
 
@@ -11,7 +11,7 @@ session_start();
 	$User = $_POST['Uname'];
 	$Pass = $_POST['pass'];
 
-		$_SESSION['Uname'] = $user;
+		$_SESSION['Uname'] = $User;
 
 	// see if the user name and password is present in the db
 	$sql = "SELECT * FROM users WHERE userName = '$User' && password = '$Pass'";
@@ -19,9 +19,12 @@ session_start();
 		$query = mysqli_query($connect, $sql);
 
 	if(mysqli_num_rows($query)){
-		header("Location: ./explore.php");
+		include_once "./explore.php";
 	}
 	else{
 		header("Location: ../HTML/index.html?error=wrongpasswordorusername");
 	}	
+}
+else{
+	echo "hi";
 }

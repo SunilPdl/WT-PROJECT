@@ -41,10 +41,3 @@ document.querySelector('#login-button').addEventListener('click', login_popUp);
 document.querySelector('.close-signup').addEventListener('click', close_signPopUp);
 document.querySelector('.close-login').addEventListener('click', close_loginPopUp);
 
-function check_tag(){
-    var Tag = document.getElementById("tag").value;
-
-        if(Tag == 'science'){
-            document.getElementById('S');
-        }
-}
