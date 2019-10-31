@@ -1,6 +1,8 @@
 <?php
     require_once "../SQL/connection.php";
 
+    $id = $_GET['id'];
+
     $previousDataResult = mysqli_query($connect, "SELECT * FROM questions WHERE Number = ". $id ) ;
     $previous = mysqli_fetch_assoc($previousDataResult) ;
 ?>
@@ -15,8 +17,9 @@
 
     <link rel="stylesheet" href="../CSS/style.css"/>
     <link rel="stylesheet" href="../CSS/add_edit.css"/>
+    <script defer src="../JS/script.js"></script>
 </head>
-<body>
+<body onload="check_tag()">
     <div class="text-add">
         <h3>Edit Question</h3>
     </div>
@@ -28,7 +31,9 @@
                         Question:
                     </td>
                     <td>
-                        <textarea name="question" cols="90" rows="10" value="<?= $previous['question']?>"></textarea>
+                        <textarea name="question" cols="90" rows="10">
+                            <?= $previous['Question']?>
+                        </textarea>
                     </td>
                 </tr>
                 <tr>
@@ -36,15 +41,16 @@
                         Tag:
                     </td>
                     <td>
-                        <input type="radio" name="tag" value="science"/>SCIENCE
-                        <input type="radio" name="tag" value="technology"/>TECHNOLOGY
-                        <input type="radio" name="tag" value="maths"/>MATHS
-                        <input type="radio" name="tag" value="history"/>HISTORY
-                        <input type="radio" name="tag" value="general"/>GENERAL
+                        <input type="hidden" value="<?= $previous['tag']?>" id="tag">
+                        <input type="radio" name="tag" value="science" id="S"/>SCIENCE
+                        <input type="radio" name="tag" value="technology" id="T"/>TECHNOLOGY
+                        <input type="radio" name="tag" value="maths" id="M"/>MATHS
+                        <input type="radio" name="tag" value="history" id="H"/>HISTORY
+                        <input type="radio" name="tag" value="general" id="G"/>GENERAL
                     </td>
                 </tr>
             </table>
-            <input type="submit" value="Ask"/>
+            <input type="submit" value="edit"/>
         </form>
     </div>
 </body>

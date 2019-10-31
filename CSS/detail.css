@@ -10,10 +10,10 @@
 }
 
 .add-div{
-    padding: 20px;
+    padding: 30px;
     font-size: 16px;
     text-align: left;
-    background-color: #cac7c7;
+    /* background-color: #cac7c7; */
 }
 
 #add-link{
@@ -24,17 +24,22 @@
     border-radius: 5px;
 }
 
-.list-div{
-    padding: 30px;
-}
-
 ul{
     list-style-type: none;
+    padding: 20px;
 }
 
 li{
     padding: 10px;
 }
+
+ul:nth-child(odd){
+    background-color: #cac7c7;
+}
+
+/* ul:nth-child(even){
+    background-color: whitesmoke;
+} */
 
 .tag{
     border: 1px black solid;

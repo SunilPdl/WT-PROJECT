@@ -1,4 +1,5 @@
 <?php
+
     require_once "../SQL/connection.php";
 
     $sql = 'select * from questions ' ;
@@ -24,10 +25,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body>
-    <div id="top"></div>
 
     <!-- head of the explore page -->
-    <header>
+    <header class="fix-header">
         <!-- navigation Bar -->
         <nav>
             <a href="#">Explore</a>
@@ -36,8 +36,10 @@
         </nav>
     </header>
 
+    <div id="top"></div>
+
     <!-- questions and answer lists -->
-    <main>
+    <main class="margin-main">
         <div class="add-div">
             <a href="../HTML/add.html" style="color: black; font-size: 18px">
                 <p id="add-link">
@@ -51,19 +53,20 @@
                 <li>
                     <i>Q: </i>
                     <?= $data['Question']?>
-                    <span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span title="edit">
                         <a href="../PHP/edit.php?id= <?= $data['Number'] ?>">
                             <i style="color: black;" class="far fa-edit"></i>
                         </a>
                     </span>
-                    <span>
+                    <span title="delete">
                         <a href="../SQL/delete.php?id= <?= $data['Number'] ?>">
-                            <i style="color: black;">D</i>
+                            <i style="color: red;" class="fas fa-trash-alt"></i>
                         </a>
                     </span>
                     <br/><br/>
                     <span>
-                        Tag:
+                        <u>Tag:</u>
                         <i class="tag">
                             <?= $data['tag']?>
                         </i>

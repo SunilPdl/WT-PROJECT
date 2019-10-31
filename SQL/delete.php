@@ -2,13 +2,14 @@
 
 require_once "./connection.php"
 
-if(is_numeric($_GET['id'])){
-	$id = $_GET['id'] ;
-}
+	mysqli_query($connect, "DELETE FROM questions WHERE Number = " , $_GET['id']) ;
+	header("Location: ../PHP/explore.php") ;
 
-if(! $id ){
-	die("Please give some valid numeric id to edit. Pass id from Query String.(..?id=5)") ;
-}
+// $id = $_GET['id'];
 
-        mysqli_query($connection, "DELETE FROM questions WHERE Number = $id") ;
-		header("Location: ../PHP/explore.php") ;
+// if( !is_numeric($id) ){
+// 	die("Please give some valid numeric id to edit. Pass id from Query String.(..?id=5)") ;
+// }else{
+// 	mysqli_query($connection, "DELETE FROM questions WHERE Number = " .$id) ;
+// 	header("Location: ../PHP/explore.php") ;
+// }	

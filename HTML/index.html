@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <script defer src="../JS/script.js"></script>
+
 </head>
 <body>
     <!-- head of the landing page before login -->
@@ -21,7 +22,7 @@
             <a href="../PHP/explore2.php">Explore</a>
             <a href="#contact">Contact</a>
             <!-- <a href="#" onclick="signup_popup()">Signup</a> -->
-            <button>Signup</button>
+            <button id="signup-button">Signup</button>
         </nav>
     </header>
 
@@ -31,9 +32,10 @@
             <!-- <div class="overlay-div"> -->
                 <h1>Welcome to askiee</h1>
             <!-- </div> -->
+
         </section>
         <section class="intro SS">
-            <img src="../ASSETS/aaron-burden-AXqMy8MSSdk-unsplash.jpg" alt="explore.jpg">
+            <img src="../ASSETS/screenShotQ.png" alt="screenShotQ.jpg">
             <h2>Join and ask</h2>
         </section>
         <section class="intro feature">
@@ -52,54 +54,54 @@
                     <tr>
                         <td>Email :</td>
                         <td>
-                            <input type="email" name="email"/>
+                            <input type="email" name="email" id="Em" required/>
                         </td>
                     </tr>
                     <tr>
                         <td>UserName :</td>
                         <td>
-                            <input type="text" name="Uname"/>
+                            <input type="text" name="Uname" id="uName" required/>
                         </td>
                     </tr>
                     <tr>
                         <td>Password :</td>
                         <td>
-                            <input type="password" name="pass"/>
+                            <input type="password" name="pass" id="Pass1" required/>
                         </td>
                     </tr>
                     <tr>
                         <td>Retype :</td>
                         <td>
-                            <input type="password" name="pass2"/>
+                            <input type="password" name="pass2" id="Pass2" required/>
                         </td>
                     </tr>
                 </table>
-                <input type="submit" value="SIgnUp"/>
+                <input type="submit" name="signUp"/>
             </form>
-            <button onclick="login_popUp()" style="color: black;"><u>Login</u></button>
+            <button id="login-button" style="color: black;"><u>Login</u></button>
+        </div>    
         <div class="login-box">
             <span class="close-login"> &times; </span>    
-            <form action="../PHP/handleUser.php" method="POST" id="login-form">
+            <form action="../PHP/handleLogUser.php" method="POST" id="login-form">
                 <h3>Log-in</h3>
                 <table>
                     <tr>
                         <td>UserName :</td>
                         <td>
-                            <input type="text" name="Uname"/>
+                            <input type="text" name="Uname" id="LoguName" required/>
                         </td>
                     </tr>
                     <tr>
                         <td>Password :</td>
                         <td>
-                            <input type="password" name="pass"/>
+                            <input type="password" name="pass" id="logPass" required/>
                         </td>
                     </tr>
                 </table>
-                <input type="submit" value="LogIn"/>
-                <button onclick="signup_popup()" style="color: black;"><u>SignUp</u></button>
+                <input type="submit" name="LogIn"/>
             </form>
+            <button onclick="signup_popup()" style="color: black;"><u>SignUp</u></button>
         </div>    
-        </div>
 
     <!-- foot of the website, contact part -->
     <footer id="contact">

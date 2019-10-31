@@ -22,15 +22,15 @@
     <link rel="stylesheet" href="../CSS/style.css"/>
     <link rel="stylesheet" href="../CSS/detail.css"/>
     <script defer scr="../JS/script.js"></script>
+
 </head>
 <body>
     <!-- head of the explore page -->
     <header>
         <!-- navigation Bar -->
         <nav>
-            <a href="#">Explore</a>
             <a href="#contact">Contact</a>
-            <button>Signup</button>
+            <a href="../HTML/index.html">Back</a>
         </nav>
     </header>
 
@@ -38,7 +38,7 @@
     <!-- questions and answer lists -->
     <main>
         <div class="add-div">
-            <a href="#" style="color: black; font-size: 18px" onclick="alert('Please signup or login first')">
+            <a href="#" style="color: black; font-size: 18px" onclick="alert('Please login or signup first');">
                 <p id="add-link">
                     <u>Ask question</u>+
                 </p>
@@ -61,44 +61,6 @@
         <?php } ?>    
         </div>
     </main>
-
-    <!-- signUp pop up box -->
-    <div class="signup-bg" value="close"></div>
-
-        <div class="signup-box">
-            <span class="close-signup"> &times; </span>
-            <form action="../PHP/handleUser.php" method="POST">
-                <h3>Sign-up</h3>
-                <table>
-                    <tr>
-                        <td>Email :</td>
-                        <td>
-                            <input type="email" name="email"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>UserName :</td>
-                        <td>
-                            <input type="text" name="Uname"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Password :</td>
-                        <td>
-                            <input type="password" name="pass"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Retype :</td>
-                        <td>
-                            <input type="password" name="pass2"/>
-                        </td>
-                    </tr>
-                </table>
-                <input type="submit" value="SIgnUp"/>
-                or <button onclick="login_popup()" style="color: black;">Login</button>
-            </form>
-        </div>
 
     <span class="upperArrow">
         <a href="#top">^</a>

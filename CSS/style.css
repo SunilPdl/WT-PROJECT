@@ -4,7 +4,7 @@
 }
 
 /* head of the website */
-header{
+.fix-header{
     position: fixed;
     top: 0;
     width: 100%;
@@ -47,7 +47,10 @@ nav a:hover, button:hover{
 /* main part of the website */
 main{
     text-align: center;
-    margin-top: 60px;
+}
+
+.margin-main{
+    margin-top: 50px;
 }
 
 /* introduction part */
@@ -69,8 +72,8 @@ main{
 }
 
 .SS img{
-    width: 300px;
-    height: 300px;
+    width: 1000px;
+    height: 600px;
 }
 
 /* section containing features of the website */
@@ -113,6 +116,13 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.signup-box{
+    display: none;
+}
+
+.login-box{
     display: none;
 }
 

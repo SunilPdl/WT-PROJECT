@@ -1,6 +1,7 @@
 <?php
 
-require_once "../SQL/connection.php";
+if(isset($_POST['signUp'])){
+	require_once "../SQL/connection.php";
 
 // starting the session
 session_start();
@@ -23,12 +24,13 @@ if($pass == $Repass){
 	//to make sure at least one row is affected
 	if(mysqli_affected_rows($connect) > 0){
 		echo "user added successfully" ;
-		header("Location: ../PHP/explore.php") ;
+		header("Location: ../PHP/explore.php?sign=1") ;
 	}else{
 		echo "error" ;
-		var_dump(mysqli_error_list($connection)) ;
+		var_dump(mysqli_error_list($connect)) ;
 	}
 }else{
 	session_destroy();
     header("location: ../HTML/index.html");
+}
 }
